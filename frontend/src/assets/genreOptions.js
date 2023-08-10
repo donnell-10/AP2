@@ -1,0 +1,186 @@
+
+
+const genreOptions = [
+    //A
+    {value:'A cappella', label:'A Cappella' },
+    {value:'Abstract', label:'Abstract' },
+    {value:'Afrikaans', label:'Afrikaans' },
+    {value:'Afrobeat', label:'Afrobeat' },
+    {value:'Alternative Country', label:'Alternative Country' },
+    {value:'Alternative Dance', label:'Alternative Dance' },
+    {value:'Alternative Hip-Hop', label:'Alternative Hip-Hop' },
+    {value:'Alternative Metal', label:'Alternative Metal' },
+    {value:'Alternative Pop', label:'Alternative Pop' },
+    {value:'Alternative R&B', label:'Alternative R&B' },
+    {value:'Ambient', label:'Ambient' },
+    {value:'Anime', label:'Anime' },
+    {value:'Arab Folk', label:'Arab Folk' },
+    {value:'Azonto', label:'Azonto' },
+    //B
+    {value:'Bachata', label:'Bachata' },
+    {value:'Baile Funk', label:'Baile Funk' },
+    {value:'Bangla', label:'Bangla' },
+    {value:'Baroque', label:'Baroque' },
+    {value:'Bhangra', label:'Bhangra' },
+    {value:'Blues', label:'Blues' },
+    {value:'Bolero', label:'Bolero' },
+    {value:'Bounce', label:'Bounce' },
+    {value:'Britpop', label:'Britpop' },
+    //C
+    {value:'C-Pop', label:'C-Pop' },
+    {value:'Cajun', label:'Cajun' },
+    {value:'Celtic', label:'Celtic' },
+    {value:'Chill-Out', label:'Chill-Out' },
+    {value:'Christian', label:'Christian' },
+    {value:'Classical', label:'Classical' },
+    {value:'Comedy', label:'Comedy' },
+    {value:'Country', label:'' },
+    {value:'Coupe Decale', label:'Coupe Decale' },
+    //D
+    {value:'Dancehall', label:'Dancehall' },
+    {value:'Dansktop', label:'Dansktop' },
+    {value:'Desi', label:'Desi' },
+    {value:'Disco', label:'Disco' },
+    {value:'Drill And Bass', label:'Drill And Bass' },
+    {value:'Drone', label:'Drone' },
+    {value:'Dubstep', label:'Dubstep' },
+    {value:'Dutch Hip Hop', label:'Dutch Hip-Hop'},
+    //E
+    {value:'EDM', label:'EDM' },
+    {value:'Electro', label:'Electro' },
+    {value:'Emo', label:'Emo' },
+    {value:'Eurobeat', label:'Eurobeat' },
+    {value:'Eurodance', label:'Eurodance' },
+    {value:'Europop', label:'Europop' },
+    //F
+    {value:'Folk', label:'Folk' },
+    {value:'Freestyle', label:'Freestyle' },
+    {value:'French Hip-Hop', label:'French Hip-Hop' },
+    {value:'French Pop', label:'French Pop' },
+    {value:'Funk', label:'Funk' },
+    //G
+    {value:'Gangster Rap', label:'Gangster Rap' },
+    {value:'German Hip-Hop', label:'German Hip-Hop' },
+    {value:'German Pop', label:'German Pop' },
+    {value:'Gospel', label:'Gospel' },
+    {value:'Grime', label:'Grime' },
+    {value:'Grunge', label:'Grunge' },
+    //H
+    {value:'Hardcore', label:'Hardcore' },
+    {value:'Hip-Hop', label:'Hip-Hop' },
+    {value:'House', label:'House' },
+    //I
+    {value:'Idol', label:'Idol' },
+    {value:'Indian Pop', label:'Indian Pop' },
+    {value:'Indie Pop', label:'Indie Pop' },
+    {value:'Indie R&B', label:'Indie R&B' },
+    {value:'Indie Rock', label:'Indie Rock' },
+    {value:'Industrial', label:'Industrial' },
+    {value:'Italian Hip-Hop', label:'Italian Pop' },
+    //J
+    {value:'J-Dance', label:'J-Dance' },
+    {value:'J-Pop', label:'J-Pop' },
+    {value:'J-Rap', label:'J-Rap' },
+    {value:'J-Rock', label:'J-Rock' },
+    {value:'Japanese R&B', label:'Japanese R&B' },
+    {value:'Jazz', label:'Jazz' },
+    //K
+    {value:'K-Pop', label:'K-Pop' },
+    {value:'K-Rock', label:'K-Rock' },
+    {value:'Kuduro', label:'Kuduro' },
+    //L
+    {value:'Latin', label:'Latin' },
+    {value:'Lo-Fi', label:'Lo-Fi' },
+    {value:'Lounge', label:'Lounge' },
+    //M
+    {value:'Manele', label:'Manele' },
+    {value:'Mariachi', label:'Mariachi' },
+    {value:'Mashup', label:'Mashup' },
+    {value:'Metal', label:'Metal' },
+    {value:'Metalcore', label:'Metalcore' },
+    {value:'Motivation', label:'Motivation' },
+    {value:'Minimal', label:'Minimal' },
+    {value:'Motown', label:'Motown' },
+    {value:'Movie Tunes', label:'Movie Tunes' },
+    //N
+    {value:'Nashville Sound', label:'Nashville Sound' },
+    {value:'Native American', label:'Native American' },
+    {value:'Nepali', label:'Nepali' },
+    {value:'Noise', label:'Noise' },
+    //O
+    {value:'Old School Hip Hop', label:'Old School Hip Hop' },
+    {value:'Opera', label:'Opera' },
+    {value:'Orchestral', label:'Orchestral' },
+    //P
+    {value:'Polka', label:'Polka' },
+    {value:'Pop', label:'Pop' },
+    {value:'Praise', label:'Praise' },
+    {value:'Punjabi', label:'Punjabi' },
+    {value:'Punk', label:'Punk' },
+    //Q
+    {value:'Quiet Storm', label:'Quiet Storm' },
+    //R
+    {value:'R&B', label:'R&B' },
+    {value:'Rap', label:'Rap' },
+    {value:'Reggae', label:'Reggae' },
+    {value:'Reggaeton', label:'Reggaeton' },
+    {value:'Rock', label:'Rock' },
+    {value:'Romantic', label:'Romantic' },
+    {value:'Rumba', label:'Rumba' },
+    //S
+    {value:'Salsa', label:'Salsa' },
+    {value:'Samba', label:'Samba' },
+    {value:'Soca', label:'Soca' },
+    {value:'Soul', label:'Soul' },
+    {value:'Soundtrack', label:'Soundtrack' },
+    {value:'Spanish Hip-Hop', label:'Spanish Hip-Hop' },
+    {value:'Spanish Pop', label:'Spanish Pop' },
+    {value:'Steelpan', label:'Steelpan' },
+    {value:'Swedish Pop', label:'Swedish Pop' },
+    {value:'Swing', label:'Swing' },
+    //T
+    {value:'Tango', label:'Tango' },
+    {value:'Tech House', label:'Tech House' },
+    {value:'Techno', label:'Techno' },
+    {value:'Trap Music', label:'Trap Music' },
+    {value:'Tropical', label:'Tropical' },
+    //U
+    {value:'UK Drill', label:'UK Drill' },
+    {value:'UK Garage', label:'UK Garage' },
+    {value:'UK Hip-Hop', label:'UK Hip-Hop' },
+    {value:'UK Pop', label:'UK Pop' },
+    {value:'Underground Hip-Hop', label:'Underground Hip-Hop' },
+    {value:'Underground Rap', label:'Underground Rap' },
+    //V
+    {value:'Vallenato', label:'Vallenato' },
+    //W
+    {value:'West Coast Rap', label:'West Coast Rap' },
+    {value:'Workout', label:'Workout' },
+    {value:'World', label:'World' },
+    //Y
+    {value:'Ye Ye', label:'Ye Ye' },
+    //Z
+    {value:'Zolo', label:'Zolo' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+    // {value:'', label:'' },
+
+
+
+
+
+]
+
+export default genreOptions
