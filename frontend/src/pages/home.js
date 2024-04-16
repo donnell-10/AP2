@@ -109,7 +109,7 @@ const Home = ({getAllPlaylist}) => {
     
     return(
         <div style={{display:'flex', flexDirection:'column', height:'100vh'}}>
-            <div className='grid containter mb-1' style={{background:'#48EF48', border:'1px', borderRadius:'2px', gridTemplateColumns: ' 1050px 200px', display:'flex', flexWrap:'wrap', justifyContent:'space-between', width: '100%'}}>
+            <div className='grid containter mb-1' style={{background:'#48EF48', border:'1px', borderRadius:'2px', gridTemplateColumns: ' 1050px 200px', display:'flex', flexWrap:'wrap', justifyContent:'space-between', width: '100%', padding:'10px'}}>
                 <div className="grid-item">
                     <h2 style={{color:'white'}}>
                         Create a playlist based on what is popular in your location! 
@@ -140,9 +140,9 @@ const Home = ({getAllPlaylist}) => {
                     </button>
                 </div>
             </div>
-            <h3>What The World Is Listening To</h3>
+            <h3 style={{padding:'10px'}}>What The World Is Listening To</h3>
             <div className='grid containter' style={{ border:'1px', borderRadius:'2px', gridTemplateColumns: ' 100px 1000px', display:'grid'}}>
-                <div className='grid-item'>
+                {/* <div className='grid-item'>
                     <div className='sidebar'>
                         <label className="container" style={{fontSize:'20px', marginBottom:'10px'}}>
                             Filter
@@ -185,14 +185,58 @@ const Home = ({getAllPlaylist}) => {
                         </label>
                             
                     </div>
-                </div>
+                </div> */}
+                <nav className="nav flex-column bg-dark-subtle" style={{width:'200px', borderRadius:'5px'}}>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        United Kingdom
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        United States
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Spain
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Brazil
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Netherlands
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Portugal
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        India
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Japan
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        France
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Australia
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Canada
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        China
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Mexico
+                    </a>
+                    <a className="nav-link" style={{fontSize:'20px', cursor:'pointer', color:'grey'}}>
+                        Sweeden
+                    </a>
+                </nav>
                 <div className="grid-item" style={{display:'flex', flexDirection:'column', width:'100%', marginLeft:'50px'}}>
                     <div className='grid-container' style={{display:'grid', flexWrap: 'wrap', gridTemplateColumns: 'repeat(4, 20fr)', gap:'50px', border:'1px', borderRadius:'2px', marginLeft:'75px', width:'100%'}}>
                     {playlists.map((item, index) => (            
                            <div key={index}> 
                             <div className="grid-item" style = {{width:'100%', display:'flex', flexDirection:'column'}}>
                                 
-                                    <div className="card" style={{boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',}}>
+                                    <div className="card" style={{boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', cursor:'pointer'}}>
                                         <img className="card-img-top"
                                         src={item.image}
                                         alt='playlist tile'

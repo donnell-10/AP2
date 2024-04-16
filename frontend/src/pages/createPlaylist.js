@@ -106,8 +106,8 @@ function CreatePlaylist () {
 
     
     return(
-        <div style={{display:'flex', flexDirection:'column'}}>
-            <div className='grid containter mb-1' style={{background:'#48EF48', border:'1px', borderRadius:'2px', gridTemplateColumns: ' 1050px 200px', display:'flex', flexWrap:'wrap', height:'100vh', justifyContent:'center', alignItems:'center', overflow:'hidden'}}>
+        <div style={{display:'flex', flexDirection:'column', background:'#48EF48'}}>
+            <div className='grid containter mb-1' style={{ border:'1px', borderRadius:'2px', gridTemplateColumns: ' 1050px 200px', display:'flex', flexWrap:'wrap', height:'110vh', justifyContent:'center', alignItems:'center'}}>
                 <div className='grid-item' style={{marginBottom:'50px'}}>
                     <h1 style={{color:'white'}}>
                         Create A New Playlist

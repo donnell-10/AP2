@@ -85,7 +85,7 @@ const Dashboard = ({isAuthenticated, user, getPlaylists, deletePlaylist}) => {
                     {playlists.map((item, index) => (
                     <div key={index}>
                         <div className="col-sm-12 mb-4">
-                            <div className="card" style={{boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1)'}}>
+                            <div className="card cursor:pointer" style={{boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1)', cursor: 'pointer'}}>
                                 <img className="card-img-top"
                                 src={item.image} 
                                 alt="playlist tile"
@@ -95,12 +95,14 @@ const Dashboard = ({isAuthenticated, user, getPlaylists, deletePlaylist}) => {
                                     <h5 className="card-title">{item.name}</h5>
                                     <p className="card-text">Number of Songs: {item.no_of_songs}</p>
                                     <p className="card-text">Created by: {user.name}</p>
-                                    <button className="btn btn-primary btn-sm" 
-                                    onClick={() =>handlePlaylistClick(item.id, item.name, 
-                                    item.location, item.song_ids, item.no_of_songs, item.image)}>Open</button>
-                                    <button className="btn btn-danger"  onClick={() => handleDelete(item.id)}>
-                                            <i className="bi bi-trash"></i>
-                                    </button>
+                                    <div className="flex gap-4 justify-content-center" style={{display:'flex', gap:'4', alignContent:'start'}}>
+                                        <button className="btn btn-primary btn-sm" 
+                                        onClick={() =>handlePlaylistClick(item.id, item.name, 
+                                        item.location, item.song_ids, item.no_of_songs, item.image)}>Open</button>
+                                        <button className="btn btn-danger"  onClick={() => handleDelete(item.id)}>
+                                                <i className="bi bi-trash"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
